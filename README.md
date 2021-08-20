@@ -198,7 +198,7 @@ Exemplo de retorno:
       "iso_639_1": "en",
       "name": "English"
     },
-    {
+    { 
       "english_name": "Spanish",
       "iso_639_1": "es",
       "name": "Español"
