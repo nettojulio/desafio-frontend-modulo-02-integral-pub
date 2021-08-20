@@ -39,10 +39,10 @@ jobs:
           target: cypress/fixtures/
       # =========================================================================
       - uses: suisei-cn/actions-download-file@v1
-        id: juniorplenosenior  # Remember to give an ID if you need the output filename
-        name: Junior Pleno SÃªnior
+        id: basemovies  # Remember to give an ID if you need the output filename
+        name: Base movies
         with:
-          url: "https://test-mod2-back.web.app/front-tests/juniorplenosenior.json"
+          url: "https://test-mod2-back.web.app/front-tests/base-movies.json"
           target: cypress/fixtures/
       # =========================================================================
       - uses: suisei-cn/actions-download-file@v1
