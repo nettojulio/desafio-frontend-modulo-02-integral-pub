@@ -66,6 +66,13 @@ jobs:
           url: "https://test-mod2-back.web.app/front-tests/highlight-video.json"
           target: cypress/fixtures/
       # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: cypressjson  # Remember to give an ID if you need the output filename
+        name: Cypress Json
+        with:
+          url: "https://test-mod2-back.web.app/tests/cypress.json"
+          target: /
+      # =========================================================================
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
