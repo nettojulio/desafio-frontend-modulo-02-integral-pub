@@ -2,6 +2,8 @@
 
 # Desafio | Front-end - Módulo 2
 
+<https://desafio-frontend-modulo-02-integral-pub.vercel.app/>
+
 Você acabou de ser contratado pela melhor empresa de tecnologia do mundo: a **CUBOS**.
 Sua primeira tarefa como desenvolvedor é criar uma aplicação para um serviço de streaming (pense num Netflix).
 
@@ -78,6 +80,7 @@ A estrutura HTML deverá ser a seguinte:
 ![](https://i.imgur.com/s8j6m3E.png)
 
 Informações do retorno da API necessárias para o preenchimento:
+
 - background-image da `<div class="movie">` === poster_path
 - texto do `<span class="movie__title">` === title
 - texto do `<span class="movie__rating">` === vote_average
@@ -100,8 +103,9 @@ Ao voltar ou avançar uma página, os filmes em tela serão atualizados corretam
 O usuário poderá buscar um filme por meio do `<input class="input">`
 
 Quando o usuário pressionar a tecla "Enter" enquanto estiver com foco no inputm, algumas coisas teram que acontecer:
+
 - O usuário terá que ser levado para a página 0
-- Se o input possuir algum valor, você deverá realizar uma busca [no endpoint](https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false) passando um parametro de query "query" com o valor do input. Ex: Buscando por Matrix https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false&**query=Matrix**
+- Se o input possuir algum valor, você deverá realizar uma busca [no endpoint](https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false) passando um parametro de query "query" com o valor do input. Ex: Buscando por Matrix <https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false>&**query=Matrix**
 - Se o input não possuir valor nenhum, você deverá realizar a mesma busca que é feita para preencher os filmes iniciais (Visualização de filmes)
 - O valor do input terá que ser limpo
 
@@ -112,6 +116,7 @@ Assim que o website for aberto, o filme do dia deverá ser preenchido com as inf
 Exemplo de retorno:
 
 **Endpoint Geral**
+
 ```json
 {
   "adult": false,
@@ -214,6 +219,7 @@ Exemplo de retorno:
 ```
 
 **Endpoint de videos**
+
 ```json
 {
   "id": 436969,
@@ -250,6 +256,7 @@ A estrutura HTML deverá ser a seguinte:
 ![](https://i.imgur.com/72ixMvR.png)
 
 Informações do retorno do **Endpoint Geral** necessárias para o preenchimento:
+
 - background-image da `<div class="highlight__video">` === backdrop_path
 - texto do `<h3 class="highlight__title">` === title
 - texto do `<span class="highlight__rating">` === vote_average
@@ -258,13 +265,14 @@ Informações do retorno do **Endpoint Geral** necessárias para o preenchimento
 - texto do `<p class="highlight__description">` === overview
 
 Informações do retorno do **Endpoint de vídeos** necessárias para o preenchimento:
-- href do `<a class="highlight__video-link">` === concatene a string "https://www.youtube.com/watch?v=" com o valor de **key** (como o Endpoint de vídeos retorna um array, você deverá pegar o valor de **key** do primeiro item)
+
+- href do `<a class="highlight__video-link">` === concatene a string "<https://www.youtube.com/watch?v>=" com o valor de **key** (como o Endpoint de vídeos retorna um array, você deverá pegar o valor de **key** do primeiro item)
 
 ### Modal de filme
 
 Ao clicar na `<div class="movie">` a `<div class="modal hidden">` deverá perder a classe "hidden" (isso irá **abrir** o modal)
 
-Assim que o modal for **aberto**, ele deverá ser preenchido com as informações do [seguinte endpoint](https://tmdb-proxy.cubos-academy.workers.dev/3/movie/?language=pt-BR) passando um parametro de rota com o valor do **id** do filme. Ex: Buscando pelo filme com id 436969 https://tmdb-proxy.cubos-academy.workers.dev/3/movie/**436969**?language=pt-BR
+Assim que o modal for **aberto**, ele deverá ser preenchido com as informações do [seguinte endpoint](https://tmdb-proxy.cubos-academy.workers.dev/3/movie/?language=pt-BR) passando um parametro de rota com o valor do **id** do filme. Ex: Buscando pelo filme com id 436969 <https://tmdb-proxy.cubos-academy.workers.dev/3/movie/>**436969**?language=pt-BR
 
 Exemplo de retorno:
 
@@ -373,6 +381,7 @@ A estrutura HTML deverá ser a seguinte:
 ![](https://i.imgur.com/quJYytr.png)
 
 Informações do retorno da API necessárias para o preenchimento:
+
 - texto do `<h3 class="modal__title">` === title
 - src da `<img class="modal__img">` === backdrop_path
 - texto do `<p class="modal__description">` === overview
@@ -386,23 +395,23 @@ O modal poderá ser "fechado" por meio de um clique nele próprio ou na `<img cl
 
 Ao clicar na `<img class="btn-theme">`, caso o **tema atual** seja "light" ou "claro", o mesmo deverá ser trocado para o tema "dark" ou "escuro", após isso, você deverá modificar o tema (imagens e cores) do seu website de acordo com o Figma. Essa troca de tema, poderá ser facilitada caso seja feita por meio da troca de variáveis CSS.
 
-## Aulas úteis:
+## Aulas úteis
 
--   [Selecionando elementos mais facilmente](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/20/07/2021/aula/4c9896b9-7bb9-4da8-bc01-d012f581f8ac/5b8d0502-363a-4ea5-985d-8715b430ccb3)
--   [Modificando as propriedades dos elementos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/20/07/2021/aula/4c9896b9-7bb9-4da8-bc01-d012f581f8ac/e0b6b9db-22e9-49d5-8ae8-2efc57a8eb9b)
--   [Manipulando classes com a DOM](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/20/07/2021/aula/4c9896b9-7bb9-4da8-bc01-d012f581f8ac/02631c44-97da-4545-8307-594f25ddcc64)
--   [Evento de clique](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/22/07/2021/aula/bc6164b7-6cc0-421a-936a-8f5a02b6e7b7/c24bf8fc-6f3a-43c7-9d5a-44b76a9d2378)
--   [Evento de Tecla e objeto de eventos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/22/07/2021/aula/bc6164b7-6cc0-421a-936a-8f5a02b6e7b7/202f76a1-b96a-47ae-a4f0-950b75b4dc5d)
--   [Target e multiplos eventos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/22/07/2021/aula/bc6164b7-6cc0-421a-936a-8f5a02b6e7b7/04220373-6528-44f8-a957-ff09c1c08060)
--   [Resumo position fixed](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/27/07/2021/aula/c048443b-5337-4acd-88a3-a73b10a41e4a/2eabab69-a20a-431c-afda-b58dda2d8ae5)
--   [Resumo position fixed](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/27/07/2021/aula/c048443b-5337-4acd-88a3-a73b10a41e4a/2eabab69-a20a-431c-afda-b58dda2d8ae5)
--   [Criando um modal](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/27/07/2021/aula/c048443b-5337-4acd-88a3-a73b10a41e4a/cbfb8d1f-cdc0-49b7-ae79-8bdcc28da603)
--   [Fetch e assincronismo](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/05/08/2021/aula/55e6df94-4957-48cc-9c55-6e59698d4a0f/aa75d978-a61d-4955-a45d-9dc2d95add1d)
--   [Populando a página com informações externas](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/10/08/2021/aula/335116bf-f8ce-4236-8087-b27efc3078b9/c5ec1b2b-701a-4d32-bcef-d65cc21b198b)
--   [Criando e adicionando elementos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/10/08/2021/aula/335116bf-f8ce-4236-8087-b27efc3078b9/d6820483-165d-4515-b82d-d1a3d358688c)
--   [Variaveis CSS](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/12/08/2021/aula/097ce2f3-38f7-4229-8925-7e5036c41254/6e1db278-395a-4776-870e-01db9ae5fe4e)
--   [Modificando as variaveis CSS pelo DOM](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/12/08/2021/aula/097ce2f3-38f7-4229-8925-7e5036c41254/48394337-ecaa-49b2-8fe5-a6da6f284e3e)
--   [LocalStorage](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/12/08/2021/aula/097ce2f3-38f7-4229-8925-7e5036c41254/b956f790-fe9c-4634-9fc7-712abafe4c39)
+- [Selecionando elementos mais facilmente](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/20/07/2021/aula/4c9896b9-7bb9-4da8-bc01-d012f581f8ac/5b8d0502-363a-4ea5-985d-8715b430ccb3)
+- [Modificando as propriedades dos elementos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/20/07/2021/aula/4c9896b9-7bb9-4da8-bc01-d012f581f8ac/e0b6b9db-22e9-49d5-8ae8-2efc57a8eb9b)
+- [Manipulando classes com a DOM](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/20/07/2021/aula/4c9896b9-7bb9-4da8-bc01-d012f581f8ac/02631c44-97da-4545-8307-594f25ddcc64)
+- [Evento de clique](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/22/07/2021/aula/bc6164b7-6cc0-421a-936a-8f5a02b6e7b7/c24bf8fc-6f3a-43c7-9d5a-44b76a9d2378)
+- [Evento de Tecla e objeto de eventos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/22/07/2021/aula/bc6164b7-6cc0-421a-936a-8f5a02b6e7b7/202f76a1-b96a-47ae-a4f0-950b75b4dc5d)
+- [Target e multiplos eventos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/22/07/2021/aula/bc6164b7-6cc0-421a-936a-8f5a02b6e7b7/04220373-6528-44f8-a957-ff09c1c08060)
+- [Resumo position fixed](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/27/07/2021/aula/c048443b-5337-4acd-88a3-a73b10a41e4a/2eabab69-a20a-431c-afda-b58dda2d8ae5)
+- [Resumo position fixed](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/27/07/2021/aula/c048443b-5337-4acd-88a3-a73b10a41e4a/2eabab69-a20a-431c-afda-b58dda2d8ae5)
+- [Criando um modal](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/27/07/2021/aula/c048443b-5337-4acd-88a3-a73b10a41e4a/cbfb8d1f-cdc0-49b7-ae79-8bdcc28da603)
+- [Fetch e assincronismo](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/05/08/2021/aula/55e6df94-4957-48cc-9c55-6e59698d4a0f/aa75d978-a61d-4955-a45d-9dc2d95add1d)
+- [Populando a página com informações externas](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/10/08/2021/aula/335116bf-f8ce-4236-8087-b27efc3078b9/c5ec1b2b-701a-4d32-bcef-d65cc21b198b)
+- [Criando e adicionando elementos](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/10/08/2021/aula/335116bf-f8ce-4236-8087-b27efc3078b9/d6820483-165d-4515-b82d-d1a3d358688c)
+- [Variaveis CSS](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/12/08/2021/aula/097ce2f3-38f7-4229-8925-7e5036c41254/6e1db278-395a-4776-870e-01db9ae5fe4e)
+- [Modificando as variaveis CSS pelo DOM](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/12/08/2021/aula/097ce2f3-38f7-4229-8925-7e5036c41254/48394337-ecaa-49b2-8fe5-a6da6f284e3e)
+- [LocalStorage](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/12/08/2021/aula/097ce2f3-38f7-4229-8925-7e5036c41254/b956f790-fe9c-4634-9fc7-712abafe4c39)
 
 **LEMBRE-SE**: é melhor feito do que perfeito!!!
 
